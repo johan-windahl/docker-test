@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Node.js on Docker",
   "main": "app.js",
+  "devDependencies": {
+    "mocha": "^3.5.0"
+  },
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/app.js",
+    "test": "mocha"
   }
 }
