@@ -6,5 +6,5 @@ services:
   - docker
 
 after_success:
-  -sh deploy_dockerhub.sh
+  - sh deploy_dockerhub.sh
   - test "$TRAVIS_BRANCH" = "master" && sh deploy_heroku.sh
