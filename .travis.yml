@@ -1,1 +1,9 @@
+sudo: required
+
 language: node_js
+
+services:
+  - docker
+
+after_success:
+  -sh deploy_dockerhub.sh
