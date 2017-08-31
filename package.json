@@ -9,5 +9,8 @@
   "scripts": {
     "start": "node src/app.js",
     "test": "mocha"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
   }
 }
