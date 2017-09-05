@@ -3,7 +3,7 @@ var app = require('../src/app.js');
 
 describe('Testing', function() {
   it('Does Alphadev rock?', function() {
-    assert.equal(false, app.doesAlphaDevRock());
+    assert.equal(true, app.doesAlphaDevRock());
   })
 }
 )
