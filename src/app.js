@@ -2,15 +2,25 @@
 
 const express = require('express');
 
-// Constants
-const PORT = process.env.PORT;
-const HOST = '0.0.0.0';
+var HOST = '0.0.0.0';
+var PORT = 3888;
 
+if (process.env.PORT !== '') {
+  PORT = process.env.PORT;
+}  
+
+if (process.env.HOST !== '') {
+  HOST = process.env.HOST;
+} 
 // App
 const app = express();
-app.get('/alphadev-rocks/:true', (req, res) => {
-  res.send('Params: ' + req.params);
+app.get('/alphadev-rocks', (req, res) => {
+  res.send(this.doesAlphaDevRock());
+  console.log('Of course!');
 });
 
+exports.doesAlphaDevRock = function () {
+    return true;
+}
 app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+console.log(`Running on http://${HOST}:${PORT}`); 

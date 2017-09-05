@@ -1,8 +1,9 @@
 var assert = require('assert');
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal(-1, [1,2,3].indexOf(4));
-    });
-  });
-});
+var app = require('../src/app.js');
+
+describe('Testing', function() {
+  it('Does Alphadev rock?', function() {
+    assert.equal(true, app.doesAlphaDevRock());
+  })
+}
+)
