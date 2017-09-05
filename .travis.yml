@@ -7,9 +7,11 @@ node_js:
 services:
   - docker
 
+before_install:
+  - docker build -t nodeapp .
+
 script:
-  - docker build -f Dockerfile -t "$TRAVIS_REPO_SLUG:$TAG" .
-  - docker run "$TRAVIS_REPO_SLUG:$TAG" npm test
+  - - docker run nodeapp npm test
 
 after_success:
   - sh deploy_dockerhub.sh
