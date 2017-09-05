@@ -1,6 +1,6 @@
 'use strict';
 
-const express = require('express');
+var express = require('express');
 
 var HOST = '0.0.0.0';
 var PORT = 3888;
@@ -13,7 +13,7 @@ if (process.env.HOST !== '') {
   HOST = process.env.HOST;
 } 
 // App
-const app = express();
+var app = express();
 app.get('/alphadev-rocks', (req, res) => {
   res.send(this.doesAlphaDevRock());
   console.log('Of course!');
