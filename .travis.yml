@@ -11,7 +11,7 @@ before_install:
   - docker build -t nodeapp .
 
 script:
-  - - docker run nodeapp npm test
+  - docker run nodeapp npm test
 
 after_success:
   - sh deploy_dockerhub.sh
