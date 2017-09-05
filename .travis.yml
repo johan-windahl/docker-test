@@ -8,8 +8,8 @@ services:
   - docker
 
 script:
-  - docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
-  - docker run $TRAVIS_REPO_SLUG:$TAG npm test
+  - docker build -f Dockerfile -t "$TRAVIS_REPO_SLUG:$TAG" .
+  - docker run "$TRAVIS_REPO_SLUG:$TAG" npm test
 
 after_success:
   - sh deploy_dockerhub.sh
