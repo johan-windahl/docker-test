@@ -16,7 +16,6 @@ if (process.env.HOST !== '') {
 var app = express();
 app.get('/alphadev-rocks', (req, res) => {
   res.send(this.doesAlphaDevRock());
-  console.log('Of course!');
 });
 
 exports.doesAlphaDevRock = function () {
